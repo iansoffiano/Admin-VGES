@@ -1,0 +1,69 @@
+html:not([dir=rtl]) .sidebar-lg-show .main-container,
+html:not([dir=rtl]) .sidebar-lg-show .main-footer {
+    @media (min-width: 576px) and (min-width: 992px) {
+        margin-left: 200px;
+    }
+}
+
+body {
+    .main-body {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        overflow-x: hidden;
+    }
+}
+
+.main-body {
+    margin-top: 73px;
+    .main-container {
+        @include mq-laptop {
+            margin-left: 0;
+        }
+        min-width: 0;
+        flex: 1;
+        -ms-flex: 1;
+        .breadcrumb {
+            position: relative;
+            border-radius: 0;
+            border-bottom: 1px solid #c8ced3;
+        }
+    }
+}
+
+.main-container {
+    transition: margin-left .25s, margin-right .25s, width .25s, flex .25s, -ms-flex .25s;
+}
+
+.breadcrumb {
+    background: $white;
+}
+
+.container-fluid {
+    padding: 0 30px;
+}
+
+.bg-icon {
+    position: absolute;
+    // z-index: -99;
+    bottom: 0;
+    right: 0.25em;
+    color: rgba(255, 255, 255, .25);
+    font-size: 4rem;
+}
+
+.card-header-actions {
+    display: inline-block;
+    float: right;
+    margin-right: -.25rem;
+}
+
+.card-header-action {
+    padding: 0 .25rem;
+    color: #73818f;
+    &:hover,
+    &:focus {
+        color: #73818f;
+        text-decoration: none;
+    }
+}

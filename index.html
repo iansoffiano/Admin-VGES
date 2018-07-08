@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css">
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Font Awesome Plugin CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Material Design Icon -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/materialdesignicons.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/main.css" />
+
+</head>
+
+<body class="sidebar-fixed sidebar-lg-show">
+    <nav class="navbar navbar-expand-lg navbar-default bg-white fixed-top mainNav p-0">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none mr-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="" class="navbar-brand">
+            <h3>VGES</h3>
+            <!-- <img src="./assets/img/logo.png" alt="" class="img-fluid"> -->
+        </a>
+        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav d-md-down-none">
+            <li class="nav-item px-3">
+                <a href="" class="nav-link">CRM</a>
+            </li>
+            <li class="nav-item px-3">
+                <a href="" class="nav-link">PROJECT</a>
+            </li>
+            <li class="nav-item px-3">
+                <a href="" class="nav-link">TRAVEL</a>
+            </li>
+            <li class="nav-item px-3">
+                <a href="" class="nav-link">REPORT</a>
+            </li>
+        </ul>
+        <div class="navbar-right ml-auto">
+            <ul class="navbar-nav ml-auto user-profile">
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <span class="profile-text d-md-down-none">
+                            Raka Darantika
+                        </span>
+                        <img src="./assets/img/8.jpg" alt="" class="img-avatar img-xs">
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown">
+                        <a href="" class="dropdown-item">View Profile</a>
+                        <a href="" class="dropdown-item">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="main-body">
+        <div class="left-sidebar collapse navbar-collapse show" id="navbarResponsive">
+            <nav class="sidebar-nav ps">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link active">
+                            <i class="nav-icon fa fa-home" aria-hidden="true"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="" class="nav-link nav-dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-cloud" aria-hidden="true"></i> Master Data
+                        </a>
+                        <ul class="dropdown-menu nav-dropdown-items">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-user" aria-hidden="true"></i> Officer
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-microphone" aria-hidden="true"></i> Lead
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-building-o" aria-hidden="true"></i> Account
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-drivers-license-o" aria-hidden="true"></i> Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="" class="nav-link nav-dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bar-chart" aria-hidden="true"></i> Sales</a>
+                        <ul class="dropdown-menu nav-dropdown-items">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-bullseye" aria-hidden="true"></i> Target</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-map-pin" aria-hidden="true"></i> Pipeline</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-key"></i> Opportunity</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-handshake-o" aria-hidden="true"></i> Contract</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="" class="nav-link nav-dropdown-toggle" data-toggle="dropdown"><i class="fa fa-clock-o" aria-hidden="true"></i> Activity</a>
+                        <ul class="dropdown-menu nav-dropdown-items">
+                            <li class="nav-item">
+                                <a href="" class="nav-link"><i class="fa fa-clock-o" aria-hidden="true"></i> Activity</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Notes</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item"><a href="">Admin</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4 mb-3">
+                            <div class="card bg-primary text-white">
+                                <div class="bg-icon">
+                                    <i class="fa fa-money" aria-hidden="true"></i>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="font-weight-normal mb-1">Total Prospect</h5>
+                                    <h2 class="mb-5">Rp 26.477.881.500</h2>
+                                    <h6 class="card-text">48 Prospects</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-3">
+                            <div class="card bg-success text-white">
+                                <div class="bg-icon">
+                                    <i class="fa fa-dollar" aria-hidden="true"></i>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="font-weight-normal mb-1">Total Close Deal</h5>
+                                    <h2 class="mb-5">Rp 3.025.279.600</h2>
+                                    <h6 class="card-text">16 Contract</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-3">
+                            <div class="card bg-warning text-white">
+                                <div class="bg-icon">
+                                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="font-weight-normal mb-1">Achieve In</h5>
+                                    <h2 class="mb-5">10,14 %</h2>
+                                    <h6 class="card-text">Target : Rp 29.825.110.000</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-3">
+                            <div class="card bg-danger text-white">
+                                <div class="bg-icon">
+                                    <i class="fa fa-window-close-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="font-weight-normal mb-3">Total Prospect Failed</h5>
+                                    <h2 class="mb-5">Rp 0</h2>
+                                    <h6 class="card-text">0 Prospect</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-3">
+                            <div class="card bg-info text-white">
+                                <div class="bg-icon">
+                                    <i class="fa fa-heart" aria-hidden="true"></i>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="font-weight-normal mb-3">> 70% Confidence Level</h5>
+                                    <h2 class="mb-5">Rp 1.427.272.200</h2>
+                                    <h6 class="card-text">7 Prospect</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-6 col-lg-4 mb-3">
+                            <div class="card bg-white">
+                                <div class="card-body p-4">
+                                    <h5 class="font-weight-normal mb-3">> 70% Confidence Level</h5>
+                                    <h2 class="mb-5">Rp 23343278</h2>
+                                    <h6 class="card-text text-muted">48 Prospect</h6>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <h4 class="card-title mb-1">Total Opportunity</h4>
+                                    <!-- <div class="text-muted">November 2017</div> -->
+                                </div>
+                                <div class="col-sm-7 d-none d-md-block">
+                                    <div class="btn-group btn-group-toggle float-right mt-3 mr-3" data-toggle="buttons">
+                                        <label class="btn btn-outline-secondary">
+                                            <input type="radio" name="options" id="option1" autocomplete="off"> Day
+                                        </label>
+                                        <label class="btn btn-outline-secondary active">
+                                            <input type="radio" name="options" id="option2" autocomplete="off" checked=""> Month
+                                        </label>
+                                        <label class="btn btn-outline-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> Year
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-wrapper" style="height:400px; margin-top:40px;">
+                                <canvas class="chart" id="main-chart" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    Top 5 Opportunity
+                                    <div class="card-header-actions">
+                                        <a href="#" class="card-header-action btn-minimize collapsed" data-toggle="collapse" data-target="#topOpportunity" aria-expanded="true">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#" class="card-header-action btn-close">
+                                            <i class="fa fa-close" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body collapse show" id="topOpportunity">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-stripped table-hover table-bordered">
+                                                    <thead>
+                                                        <th>Number</th>
+                                                        <th>Opportunity Name</th>
+                                                        <th>Revenue</th>
+                                                        <th>Officer</th>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Fee Transaksi Manage Service Cashless Parking DKI Jakarta</td>
+                                                            <td>Rp 5.400.000.000</td>
+                                                            <td>Retyan Anggriya Murti</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    Top 5 Closed Deal
+                                    <div class="card-header-actions">
+                                        <a href="#" class="card-header-action btn-minimize collapsed" data-toggle="collapse" data-target="#topClosedDeal" aria-expanded="true">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#" class="card-header-action btn-close">
+                                            <i class="fa fa-close" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body collapse show" id="topClosedDeal">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-stripped table-hover table-bordered">
+                                                    <thead>
+                                                        <th>Number</th>
+                                                        <th>Opportunity Name</th>
+                                                        <th>Revenue</th>
+                                                        <th>Officer</th>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Fee Transaksi Manage Service Cashless Parking DKI Jakarta</td>
+                                                            <td>Rp 5.400.000.000</td>
+                                                            <td>Retyan Anggriya Murti</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    Performa AM
+                                    <div class="card-header-actions">
+                                        <a href="#" class="card-header-action btn-minimize collapsed" data-toggle="collapse" data-target="#performaAM" aria-expanded="true">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#" class="card-header-action btn-close">
+                                            <i class="fa fa-close" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body collapse show" id="performaAM">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-stripped table-hover table-bordered">
+                                                    <thead>
+                                                        <th>Number</th>
+                                                        <th>Officer</th>
+                                                        <th>Nominal</th>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Hita Primastuti</td>
+                                                            <td>Rp 5.400.000.000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    Top 5 AM Activity
+                                    <div class="card-header-actions">
+                                        <a href="#" class="card-header-action btn-minimize collapsed" data-toggle="collapse" data-target="#topAMActivity" aria-expanded="true">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#" class="card-header-action btn-close">
+                                            <i class="fa fa-close" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body collapse show" id="topAMActivity">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-stripped table-hover table-bordered">
+                                                    <thead>
+                                                        <th>Number</th>
+                                                        <th>Officer</th>
+                                                        <th>Total Activity</th>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Devy Ayu Kusumawati</td>
+                                                            <td>4</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div>
+            <a href="#">VGES</a>
+            <span>&copy; 2018. PT Gamatechno Indonesia.</span>
+        </div>
+    </footer>
+
+    <script src="./node_modules/jquery/dist/jquery.slim.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="./assets/js/moment.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/Chart.min.js"></script>
+    <script src="./assets/js/custom-tooltips.min.js"></script>
+    <script src="./assets/js/charts-data.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

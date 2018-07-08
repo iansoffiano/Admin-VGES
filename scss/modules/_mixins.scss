@@ -1,0 +1,11 @@
+@mixin mq-laptop($lt-width: 992px) {
+    @media (min-width: $lt-width) {
+        @content;
+    }
+}
+
+@mixin mq-mobile($mb-width: 991.98px) {
+    @media (max-width: $mb-width) {
+        @content;
+    }
+}

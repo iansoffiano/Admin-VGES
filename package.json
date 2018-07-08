@@ -1,0 +1,21 @@
+{
+  "name": "admin_panel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "iansoffiano",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "@mdi/font": "^2.4.85",
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}
