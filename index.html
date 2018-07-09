@@ -56,7 +56,7 @@
                         <img src="./assets/img/8.jpg" alt="" class="img-avatar img-xs">
                     </a>
                     <div class="dropdown-menu navbar-dropdown">
-                        <a href="" class="dropdown-item">View Profile</a>
+                        <a href="" class="dropdown-item">View My Profile</a>
                         <a href="" class="dropdown-item">Logout</a>
                     </div>
                 </li>
@@ -151,7 +151,12 @@
                                 </div>
                                 <div class="card-body p-4">
                                     <h5 class="font-weight-normal mb-1">Total Prospect</h5>
-                                    <h2 class="mb-5">Rp 26.477.881.500</h2>
+                                    <h2 class="mb-5">
+                                        Rp
+                                        <span class="count">
+                                            26477881500
+                                        </span>
+                                    </h2>
                                     <h6 class="card-text">48 Prospects</h6>
                                 </div>
                             </div>
@@ -163,7 +168,12 @@
                                 </div>
                                 <div class="card-body p-4">
                                     <h5 class="font-weight-normal mb-1">Total Close Deal</h5>
-                                    <h2 class="mb-5">Rp 3.025.279.600</h2>
+                                    <h2 class="mb-5">
+                                        Rp
+                                        <span class="count">
+                                            3025279600
+                                        </span>
+                                    </h2>
                                     <h6 class="card-text">16 Contract</h6>
                                 </div>
                             </div>
@@ -175,7 +185,11 @@
                                 </div>
                                 <div class="card-body p-4">
                                     <h5 class="font-weight-normal mb-1">Achieve In</h5>
-                                    <h2 class="mb-5">10,14 %</h2>
+                                    <h2 class="mb-5">
+                                        <span class="count">
+                                            10
+                                        </span> %
+                                    </h2>
                                     <h6 class="card-text">Target : Rp 29.825.110.000</h6>
                                 </div>
                             </div>
@@ -187,7 +201,9 @@
                                 </div>
                                 <div class="card-body p-4">
                                     <h5 class="font-weight-normal mb-3">Total Prospect Failed</h5>
-                                    <h2 class="mb-5">Rp 0</h2>
+                                    <h2 class="mb-5">Rp
+                                        <span class="count">0</span>
+                                    </h2>
                                     <h6 class="card-text">0 Prospect</h6>
                                 </div>
                             </div>
@@ -198,8 +214,10 @@
                                     <i class="fa fa-heart" aria-hidden="true"></i>
                                 </div>
                                 <div class="card-body p-4">
-                                    <h5 class="font-weight-normal mb-3">> 70% Confidence Level</h5>
-                                    <h2 class="mb-5">Rp 1.427.272.200</h2>
+                                    <h5 class="font-weight-normal mb-3"> > 70% Confidence Level</h5>
+                                    <h2 class="mb-5">Rp
+                                        <span class="count">1427272200</span>
+                                    </h2>
                                     <h6 class="card-text">7 Prospect</h6>
                                 </div>
                             </div>
@@ -397,7 +415,8 @@
         </div>
     </footer>
 
-    <script src="./node_modules/jquery/dist/jquery.slim.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <script src="./node_modules/popper.js/dist/umd/popper.js"></script>
     <script src="./assets/js/moment.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
@@ -405,6 +424,19 @@
     <script src="./assets/js/custom-tooltips.min.js"></script>
     <script src="./assets/js/charts-data.js"></script>
     <script src="./assets/js/app.js"></script>
+    <script>
+        $('.count').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

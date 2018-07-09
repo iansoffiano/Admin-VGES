@@ -28,6 +28,7 @@ html:not([dir=rtl]) .sidebar-lg-show .left-sidebar {
             width: 200px;
             z-index: 1000;
             height: 100vh;
+            display: block;
         }
         @include mq-mobile {
             position: fixed;
