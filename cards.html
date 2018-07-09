@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Font Awesome Plugin CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/kartu.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="kartu kartu-primary text-white text-center">
+                    <div class="bg-icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                    <div class="panel-body p-4">
+                        <h4 class="font-weight-normal mb-1">Total Prospect</h4>
+                        <h2 class="mb-5 font-w600">
+                            Rp
+                            <span class="count">
+                                26477881500
+                            </span>
+                        </h2>
+                        <p class="card-text">48 Prospects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="kartu kartu-success text-white text-center">
+                    <div class="bg-icon">
+                        <i class="fa fa-dollar" aria-hidden="true"></i>
+                    </div>
+                    <div class="panel-body p-4">
+                        <h4 class="font-weight-normal mb-1">Total Close Deal</h4>
+                        <h2 class="mb-5 font-w600">
+                            Rp
+                            <span class="count">
+                                3025279600
+                            </span>
+                        </h2>
+                        <p class="card-text">16 Contract</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="kartu kartu-warning text-white text-center">
+                    <div class="bg-icon">
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                    </div>
+                    <div class="panel-body p-4">
+                        <h4 class="font-weight-normal mb-1">Achieve In</h4>
+                        <h2 class="mb-5 font-w600">
+                            <span class="count-percent">
+                                10.14
+                            </span> %
+                        </h2>
+                        <p class="card-text">Target : Rp 29.825.110.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="kartu kartu-danger text-white text-center">
+                    <div class="bg-icon">
+                        <i class="fa fa-window-close-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="panel-body p-4">
+                        <h4 class="font-weight-normal mb-3">Total Prospect Failed</h4>
+                        <h2 class="mb-5 font-w600">Rp
+                            <span class="count">0</span>
+                        </h2>
+                        <p class="card-text">0 Prospect</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="kartu kartu-info text-white text-center">
+                    <div class="bg-icon">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                    </div>
+                    <div class="panel-body p-4">
+                        <h4 class="font-weight-normal mb-3"> > 70% Confidence Level</h4>
+                        <h2 class="mb-5 font-w600">Rp
+                            <span class="count">1427272200</span>
+                        </h2>
+                        <p class="card-text">7 Prospect</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="./assets/js/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script>
+        // Count for Percentage use decimal
+        $('.count-percent').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function(now) {
+                    $(this).text(parseFloat(now).toFixed(2));
+                }
+            });
+        });
+    </script>
+    <script>
+        // Count for thousand separator
+        $('.count').each(function() {
+            var $this = $(this);
+            jQuery({
+                Counter: 0
+            }).animate({
+                Counter: $this.text()
+            }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function(now) {
+                    var num = Math.ceil(this.Counter).toString();
+                    if (Number(num) > 999) {
+                        while (/(\d+)(\d{3})/.test(num)) {
+                            num = num.replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+                        }
+                    }
+                    $this.text(num);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
