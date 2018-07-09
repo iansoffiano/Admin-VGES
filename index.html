@@ -145,13 +145,13 @@
                 <div class="animated fadeIn">
                     <div class="row">
                         <div class="col-sm-6 col-lg-4 mb-3">
-                            <div class="card bg-primary text-white">
+                            <div class="card bg-primary text-white text-center">
                                 <div class="bg-icon">
                                     <i class="fa fa-money" aria-hidden="true"></i>
                                 </div>
                                 <div class="card-body p-4">
                                     <h5 class="font-weight-normal mb-1">Total Prospect</h5>
-                                    <h2 class="mb-5">
+                                    <h2 class="mb-5 font-w600">
                                         Rp
                                         <span class="count">
                                             26477881500
@@ -162,13 +162,13 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4 mb-3">
-                            <div class="card bg-success text-white">
+                            <div class="card bg-success text-white text-center">
                                 <div class="bg-icon">
                                     <i class="fa fa-dollar" aria-hidden="true"></i>
                                 </div>
                                 <div class="card-body p-4">
                                     <h5 class="font-weight-normal mb-1">Total Close Deal</h5>
-                                    <h2 class="mb-5">
+                                    <h2 class="mb-5 font-w600">
                                         Rp
                                         <span class="count">
                                             3025279600
@@ -179,15 +179,15 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4 mb-3">
-                            <div class="card bg-warning text-white">
+                            <div class="card bg-warning text-white text-center">
                                 <div class="bg-icon">
                                     <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
                                 </div>
                                 <div class="card-body p-4">
                                     <h5 class="font-weight-normal mb-1">Achieve In</h5>
-                                    <h2 class="mb-5">
-                                        <span class="count">
-                                            10
+                                    <h2 class="mb-5 font-w600">
+                                        <span class="count-percent">
+                                            10.14
                                         </span> %
                                     </h2>
                                     <h6 class="card-text">Target : Rp 29.825.110.000</h6>
@@ -195,13 +195,13 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4 mb-3">
-                            <div class="card bg-danger text-white">
+                            <div class="card bg-danger text-white text-center">
                                 <div class="bg-icon">
                                     <i class="fa fa-window-close-o" aria-hidden="true"></i>
                                 </div>
                                 <div class="card-body p-4">
                                     <h5 class="font-weight-normal mb-3">Total Prospect Failed</h5>
-                                    <h2 class="mb-5">Rp
+                                    <h2 class="mb-5 font-w600">Rp
                                         <span class="count">0</span>
                                     </h2>
                                     <h6 class="card-text">0 Prospect</h6>
@@ -209,13 +209,13 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4 mb-3">
-                            <div class="card bg-info text-white">
+                            <div class="card bg-info text-white text-center">
                                 <div class="bg-icon">
                                     <i class="fa fa-heart" aria-hidden="true"></i>
                                 </div>
                                 <div class="card-body p-4">
                                     <h5 class="font-weight-normal mb-3"> > 70% Confidence Level</h5>
-                                    <h2 class="mb-5">Rp
+                                    <h2 class="mb-5 font-w600">Rp
                                         <span class="count">1427272200</span>
                                     </h2>
                                     <h6 class="card-text">7 Prospect</h6>
@@ -425,14 +425,38 @@
     <script src="./assets/js/charts-data.js"></script>
     <script src="./assets/js/app.js"></script>
     <script>
-        $('.count').each(function() {
+        // Count for Percentage use decimal
+        $('.count-percent').each(function() {
             $(this).prop('Counter', 0).animate({
                 Counter: $(this).text()
             }, {
                 duration: 4000,
                 easing: 'swing',
                 step: function(now) {
-                    $(this).text(Math.ceil(now));
+                    $(this).text(parseFloat(now).toFixed(2));
+                }
+            });
+        });
+    </script>
+    <script>
+        // Count for thousand separator
+        $('.count').each(function() {
+            var $this = $(this);
+            jQuery({
+                Counter: 0
+            }).animate({
+                Counter: $this.text()
+            }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function(now) {
+                    var num = Math.ceil(this.Counter).toString();
+                    if (Number(num) > 999) {
+                        while (/(\d+)(\d{3})/.test(num)) {
+                            num = num.replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+                        }
+                    }
+                    $this.text(num);
                 }
             });
         });

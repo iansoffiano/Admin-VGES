@@ -47,9 +47,12 @@ body {
     position: absolute;
     // z-index: -99;
     bottom: 0;
-    right: 0.25em;
-    color: rgba(255, 255, 255, .25);
-    font-size: 4rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, .15);
+    font-size: 8rem;
 }
 
 .card-header-actions {
